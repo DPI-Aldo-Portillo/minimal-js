@@ -13,5 +13,25 @@
   // Write your JS here.
   // Open the JS console and refresh the page to see the output.
 
-  
+  //FizzBuzz: Challenge:
+  //Try writing fizz buzz in JavaScript:
+  //For the numbers 1 through 100, print “fizz” if the number is a multiple of 3, “buzz” if the number is a multiple of 5, and “fizzbuzz” if the number is a multiple of both.
+
+  //Create Function to Call FizzBuzz
+  const fizzBuzz = (num) => {
+    if (num % 3 === 0 && num % 5 === 0){
+      console.log("fizzbuzz")
+    } else if (num % 3 === 0){
+      console.log("fizz")
+    } else if (num % 5 === 0) {
+      console.log("buzz")
+    } else {
+      console.log(num)
+    }
+  }
+
+  for (let i = 1; i < 101; i++) {
+    fizzBuzz(i)
+  }
+
 </script>
