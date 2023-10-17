@@ -11,6 +11,7 @@
 
 
 <div id="bye">Click me</div>
+<button class="giraffe" id="zebra">Zebraaaa</button>
 
 <script>
 //jQuery can select any dom element by #id, .class or tag by using $("...") or jQuery("...")
@@ -68,5 +69,19 @@ $("body").on("click", "#bye", function() {
   $(".west").slideToggle();
 });
 
+//Since Javascript is Async we cannot assume that something is fully loaded before something dependent on it executes so
+//$(document).ready(cb)
+
+//In order to reliably attatch an event handler:
+
+$(document).ready(function() {
+    $("#zebra").on("click", ".giraffe", function() {
+      console.log("clicked!");
+    });
+  });
+
+  $(document).ready(function(){
+    console.log("hello")
+  })
 
 </script>
