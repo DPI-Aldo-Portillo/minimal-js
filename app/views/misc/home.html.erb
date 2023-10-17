@@ -34,4 +34,46 @@
     fizzBuzz(i)
   }
 
+
+//Query Tag
+
+let items = document.getElementsByTagName("li")
+
+console.log(items)
+//Query ID
+  let chi = document.getElementById("ord");
+
+  console.log(chi.innerText)
+
+  chi.style.backgroundColor = "green"
+
+  //Can remove as well as chi.remove()
+
+  //Append at the end of the list
+  list = document.getElementById("cities_list");
+
+  list.append(chi)
+
+
+  //Query by class
+  eastItems = document.getElementsByClassName("east");
+
+  for (let i = 0; i < eastItems.length; i++) {
+    eastItems[i].style.border = "thin blue solid";
+  }
+
+  //Add new element
+  let den = document.createElement("li")
+
+  let den_text = document.createTextNode("Denver")
+
+  den.append(den_text)
+
+  den.style.backgroundColor = "orange"
+
+  den.className = "west"
+
+  den.id = "den"
+
+  list.prepend(den)
 </script>
